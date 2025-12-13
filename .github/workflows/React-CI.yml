@@ -47,7 +47,8 @@ jobs:
             username: ${{ vars.SSH_USER }}
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             source: ./*
-            target: /usr/share/nginx/html/        
+            target: /usr/share/nginx/html/
+            rm: true        
         - name: SSH into server
           uses: appleboy/ssh-action@v1.0.3
           with:
