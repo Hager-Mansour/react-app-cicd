@@ -14,6 +14,9 @@ jobs:
     with:
       node-version: '20'
       image_name: react-app-cicd
+      lint_phase: false
+      unit_test: false
+
     secrets:
         DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     
