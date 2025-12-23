@@ -8,17 +8,17 @@ export default function App() {
 //   console.log(undefinedVariable); // This will fail - variable not defined
 //   return <div>Test</div>;
 // }
-//  function App_vulnerable() {
-//   const userInput = new URLSearchParams(window.location.search).get("msg");
+ function App_vulnerable() {
+  const userInput = new URLSearchParams(window.location.search).get("msg");
 
-//   return (
-//     <div className="app">
-//       <h1>React Static Site</h1>
+  return (
+    <div className="app">
+      <h1>React Static Site</h1>
 
-//       {/* ❌ XSS vulnerability */}
-//       <div dangerouslySetInnerHTML={{ __html: userInput }} />
+      {/* ❌ XSS vulnerability */}
+      <div dangerouslySetInnerHTML={{ __html: userInput }} />
 
-//       <Hello name="railway" />
-//     </div>
-//   );
-// }
+      <Hello name="railway" />
+    </div>
+  );
+}
